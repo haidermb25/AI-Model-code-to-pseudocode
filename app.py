@@ -5,7 +5,7 @@ import json
 import math
 
 # Load vocabulary
-with open("/content/vocabulary.json", "r") as f:
+with open("vocabulary.json", "r") as f:
     vocab = json.load(f)
 
 # Page Config
@@ -92,7 +92,7 @@ def load_model(path):
     model.eval()
     return model
 
-code_to_pseudo_model = load_model("/content/transformer_epoch_8.pth")
+code_to_pseudo_model = load_model("transformer_epoch_8.pth")
 
 # Translation Function
 def translate(model, input_tokens, vocab, device, max_length=50):
